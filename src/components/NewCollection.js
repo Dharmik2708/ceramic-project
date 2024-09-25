@@ -26,7 +26,7 @@ const NewCollection = () => {
       scrollTrigger: {
         trigger: "h1 span",
         scroller: "body",
-        start:50,
+        start: 50,
       },
     });
   }, []);
@@ -81,7 +81,7 @@ const NewCollection = () => {
       <div className="new-collection">
         <div className="new-container">
           <div className="content">
-            <h1 ref={headingRef} >New collection</h1>
+            <h1 ref={headingRef}>New collection</h1>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestiae
               ipsum debitis possimus repellat blanditiis voluptatem optio
@@ -91,10 +91,10 @@ const NewCollection = () => {
           </div>
           <div className="collectio-image">
             <div className="image-2">
-              <div  id="gsapimg1"className="image">
+              <div id="gsapimg1" className="image">
                 <img src="images/new-coll-first-img.webp" alt="firstimg" />
               </div>
-              <div  id="gsapimg2"className="image">
+              <div id="gsapimg2" className="image">
                 <img src="images/new-coll-sec-img.webp" alt="secimg" />
               </div>
             </div>

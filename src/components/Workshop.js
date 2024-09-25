@@ -4,43 +4,37 @@ import React from "react";
 
 const Workshop = () => {
   useGSAP(()=>{
-    gsap.from(".workshop .workshop-img",{
-      scale:0,
-      duration:1,
-      opacity:0,
+    let tl =gsap.timeline({
       scrollTrigger:{
-        trigger:".workshop .workshop-img",
+        trigger:".workshop",
         scroller:"body",
       }
     })
-    gsap.from(".workshop-dec h1",{
+    tl.from(".workshop .workshop-img",{
+      scale:0,
+      duration:1,
+      opacity:0,
+      
+    })
+    tl.from(".workshop-dec h1",{
       y:-300,
       duration:1,
       opacity:0,
       
-      scrollTrigger:{
-        trigger:".workshop-dec h1",
-        scroller:"body",
-      }
+      
     })
-    gsap.from(".workshop-dec p",{
+    tl.from(".workshop-dec p",{
       x:300,
       duration:1,
       opacity:0,
-      scrollTrigger:{
-        trigger:".workshop-dec p",
-        scroller:"body",
-      }
+     
     })
-    gsap.from(".workshop-dec button",{
+    tl.from(".workshop-dec button",{
       scale:0,
       duration:1,
       opacity:0,
       
-      scrollTrigger:{
-        trigger:".workshop-dec buttton",
-        scroller:"body",
-      }
+      
     })
   })
   return (

@@ -4,32 +4,27 @@ import React from "react";
 
 const ProductImg = () => {
   useGSAP(()=>{
-    gsap.from(".container-img .product-img .img1 ",{
+    let tl = gsap.timeline({scrollTrigger:{
+      trigger:".container-img",
+      scroller:"body",
+    }})
+    tl.from(".container-img .product-img .img1 ",{
       scale:0,
       duration:1,
       opacity:0,
-      scrollTrigger:{
-        trigger:".container-img",
-        scroller:"body",
-      }
+      
     })
-    gsap.from(".container-img .product-img .img2 .part1",{
+    tl.from(".container-img .product-img .img2 .part1",{
       y:-500,
       duration:1,
       opacity:0,
-      scrollTrigger:{
-        trigger:".container-img",
-        scroller:"body",
-      }
+      
     })
-    gsap.from(".container-img .product-img .img2 .part2",{
+    tl.from(".container-img .product-img .img2 .part2",{
       y:500,
       duration:1,
       opacity:0,
-      scrollTrigger:{
-        trigger:".container-img",
-        scroller:"body",
-      }
+     
     })
   })
   return (

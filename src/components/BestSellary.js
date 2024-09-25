@@ -6,37 +6,28 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 gsap.registerPlugin(ScrollTrigger);
 const BestSellary = () => {
     useGSAP(()=>{
-      gsap.from(" .bestsellaery .card #img1",{
+      let tl = gsap.timeline({scrollTrigger:{
+        trigger:".bestsellaery",
+        scroller:"body",
+       
+      }})
+      tl.from(" .bestsellaery .card #img1",{
         x:-700,
         duration:1,
-        scrollTrigger:{
-          trigger:".bestsellaery .card #img1",
-          scroller:"body",
-         
-        }
+        
       })
       
 
-      gsap.from(".bestsellaery .card #img2",{
+      tl.from(".bestsellaery .card #img2",{
         scale:0,
         duration:1,
         opacity:0,
-        scrollTrigger:{
-          trigger:".bestsellaery .card #img2",
-          scroller:"body",
-        }
-
       }) 
 
 
-      gsap.from(" .bestsellaery .card #img3",{
+     tl.from(" .bestsellaery .card #img3",{
           x:700,
           duration:1,
-          
-          scrollTrigger:{
-            trigger:".bestsellaery .card #img3",
-            scroller:"body",
-          }
         })
     })
   return (

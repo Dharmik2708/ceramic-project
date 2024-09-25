@@ -4,13 +4,14 @@ import React from "react";
 
 const OurEmployees = () => {
   useGSAP(()=>{
-    gsap.from(".Our-employee h1",{
+    let tl = gsap.timeline({scrollTrigger:{
+      trigger:".Our-employee",
+      scroller:"body",
+    }})
+    tl.from(".Our-employee h1",{
       scale:0,
       duration:1,
-      scrollTrigger:{
-        trigger:".Our-employee h1",
-        scroller:"body",
-      }
+      
     })
   })
   return (
